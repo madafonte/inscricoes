@@ -1,4 +1,21 @@
 {
-  "atualizado_em": "2026-09-16T14:15:03-03:00",
-  "concursos": []
+  "atualizado_em": "2026-09-16T14:24:38-03:00",
+  "concursos": [
+    {
+      "id": 294365,
+      "cargo": "Vários Cargos",
+      "orgao": "Transpetro - Petrobras Transporte S.A.",
+      "data_limite": "2026-09-21",
+      "dias_restantes": 5,
+      "localizacao": "recife_verificar",
+      "escolaridade": "medio_tecnico",
+      "fonte": "pci_mcp",
+      "link": "https://www.pciconcursos.com.br/noticias/transpetro-publica-retificacoes-de-processos-seletivos-para-diversos-cargos",
+      "titulo_bruto": "Transpetro publica retificações de processos seletivos para diversos cargos",
+      "vagas_salario": "Vagas até R$ 15.034,81",
+      "formacao_bruta": "Médio / Técnico / Superior",
+      "primeira_vez_visto_em": "2026-09-16T14:24:38-03:00",
+      "ultima_vez_visto_em": "2026-09-16T14:24:38-03:00"
+    }
+  ]
 }

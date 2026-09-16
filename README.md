@@ -39,6 +39,10 @@ cd docs && python -m http.server
 - Concursos nacionais/federais de TI aparecem marcados como "verificar" (a API não expõe "cidade da prova" pra esses casos) — é preciso checar manualmente se o concurso tem polo de prova em Recife antes de se candidatar.
 - A automação diária (GitHub Actions com `cron`) está propositalmente desligada por enquanto — o workflow só roda quando disparado manualmente (`workflow_dispatch`). Para ligar, descomente o bloco `schedule` em [.github/workflows/update.yml](.github/workflows/update.yml).
 
+## Manutenção do site (cache do navegador)
+
+`docs/index.html` referencia `app.js` e `style.css` com um parâmetro `?v=N` (ex.: `app.js?v=2`). Isso existe pra forçar o navegador a buscar a versão nova sempre que esses arquivos mudam — sem isso, quem já visitou o site antes pode ficar até ~10 minutos vendo a versão em cache. **Toda vez que `docs/app.js` ou `docs/style.css` for editado, incremente o número da versão em `docs/index.html`.**
+
 ## Ajustar os filtros
 
 - Termos de busca de TI: `PALAVRAS_TI` em [scraper/filtros.py](scraper/filtros.py)

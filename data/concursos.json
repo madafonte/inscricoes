@@ -1,37 +1,4 @@
 {
-  "atualizado_em": "2026-09-16T14:11:47-03:00",
-  "concursos": [
-    {
-      "id": 294650,
-      "cargo": "Vários Cargos",
-      "orgao": "Prefeitura de Floresta",
-      "data_limite": "2026-10-01",
-      "dias_restantes": 15,
-      "localizacao": "recife_verificar",
-      "escolaridade": "medio_tecnico",
-      "fonte": "pci_mcp",
-      "link": "https://www.pciconcursos.com.br/noticias/prefeitura-de-floresta-pe-publica-edital-de-concurso-publico-com-diversas-vagas",
-      "titulo_bruto": "Prefeitura de Floresta - PE publica edital de concurso público com diversas vagas",
-      "vagas_salario": "432 vagas até R$ 15.005,27",
-      "formacao_bruta": "Fundamental / Médio / Técnico / Superior",
-      "primeira_vez_visto_em": "2026-09-16T14:11:47-03:00",
-      "ultima_vez_visto_em": "2026-09-16T14:11:47-03:00"
-    },
-    {
-      "id": 294812,
-      "cargo": "Vários Cargos",
-      "orgao": "Prefeitura de Moreilândia",
-      "data_limite": "2026-09-21",
-      "dias_restantes": 5,
-      "localizacao": "recife_verificar",
-      "escolaridade": "medio_tecnico",
-      "fonte": "pci_mcp",
-      "link": "https://www.pciconcursos.com.br/noticias/prefeitura-de-moreilandia-pe-abre-dois-concursos-com-vagas-imediatas-e-cadastro-de-reserva",
-      "titulo_bruto": "Prefeitura de Moreilândia - PE abre dois concursos com vagas imediatas e cadastro de reserva",
-      "vagas_salario": "115 vagas até R$ 3.847,97",
-      "formacao_bruta": "Médio / Técnico / Superior",
-      "primeira_vez_visto_em": "2026-09-16T14:11:47-03:00",
-      "ultima_vez_visto_em": "2026-09-16T14:11:47-03:00"
-    }
-  ]
+  "atualizado_em": "2026-09-16T14:15:03-03:00",
+  "concursos": []
 }

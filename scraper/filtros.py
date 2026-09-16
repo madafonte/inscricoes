@@ -62,13 +62,21 @@ def detectar_localizacao(item: dict, veio_de_busca_cidade: bool) -> str:
         return "recife_confirmado"
 
     uf = (item.get("uf") or "").upper()
-    if uf != "PE":
-        return "fora_de_escopo"
 
     titulo_norm = _normalizar(item.get("titulo", ""))
     texto = titulo_norm + " " + _normalizar(item.get("cargos_resumo", ""))
     if any(termo in texto for termo in _TERMOS_RECIFE):
         return "recife_confirmado"
+
+    if not uf:
+        # Concurso nacional (sem UF): a API não informa a cidade da prova,
+        # mas concursos nacionais costumam ter polos em várias capitais,
+        # possivelmente incluindo Recife — fica marcado pra conferência manual
+        # em vez de excluído (ex.: Transpetro, AgSUS).
+        return "recife_verificar"
+
+    if uf != "PE":
+        return "fora_de_escopo"
 
     m = _REGEX_ORGAO_MUNICIPAL.match(titulo_norm)
     if m:

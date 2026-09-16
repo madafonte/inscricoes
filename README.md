@@ -36,7 +36,7 @@ cd docs && python -m http.server
 - Só cobre concursos com **inscrições abertas** — editais "previstos/anunciados" ficam para uma fase futura.
 - Só usa o PCI Concursos como fonte — Google Notícias fica para uma fase futura.
 - A detecção de "aceita cursando" (para vagas de nível superior) depende de o título/cargo mencionar isso explicitamente — informação que geralmente só está no PDF completo do edital. Pode haver vagas elegíveis sendo excluídas por falta desse sinal no texto.
-- Concursos nacionais/federais com prova em Recife mas sem menção textual à cidade não são capturados (a API não expõe "cidade da prova" para esses casos, só o UF/cidade do órgão).
+- Concursos nacionais/federais de TI aparecem marcados como "verificar" (a API não expõe "cidade da prova" pra esses casos) — é preciso checar manualmente se o concurso tem polo de prova em Recife antes de se candidatar.
 - A automação diária (GitHub Actions com `cron`) está propositalmente desligada por enquanto — o workflow só roda quando disparado manualmente (`workflow_dispatch`). Para ligar, descomente o bloco `schedule` em [.github/workflows/update.yml](.github/workflows/update.yml).
 
 ## Ajustar os filtros

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concursos TI — Recife</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Concursos de TI — presencial em Recife</h1>
+  <p id="atualizado" class="atualizado">Carregando...</p>
+</header>
+
+<main>
+  <div class="controles">
+    <input type="text" id="busca" placeholder="Buscar por cargo, órgão...">
+  </div>
+
+  <table id="tabela">
+    <thead>
+      <tr>
+        <th>Cargo</th>
+        <th>Órgão</th>
+        <th>Prazo</th>
+        <th>Local</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody id="corpoTabela"></tbody>
+  </table>
+
+  <p id="vazio" class="vazio" hidden>Nenhum concurso encontrado com os filtros atuais.</p>
+</main>
+
+<footer>
+  <p>Fonte: PCI Concursos. Filtrado para TI, presencial em Recife-PE, inscrições abertas, nível médio/técnico ou superior (cursando aceito).</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

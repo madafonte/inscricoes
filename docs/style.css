@@ -1,0 +1,112 @@
+:root {
+  --cor-texto: #1a1a1a;
+  --cor-fundo: #ffffff;
+  --cor-borda: #ddd;
+  --cor-urgente: #fdecea;
+  --cor-urgente-texto: #a12622;
+  --cor-atencao: #fff8e1;
+  --cor-atencao-texto: #8a6100;
+  --cor-selo: #e3e3e3;
+  --cor-link: #205c98;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+  margin: 0;
+  padding: 16px;
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+.atualizado {
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 0;
+}
+
+.controles {
+  margin: 16px 0;
+}
+
+#busca {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+  display: block;
+}
+
+thead, tbody { display: table; width: 100%; table-layout: fixed; }
+
+th, td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--cor-borda);
+  font-size: 0.9rem;
+  word-wrap: break-word;
+}
+
+th {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #666;
+}
+
+tr.urgente { background-color: var(--cor-urgente); }
+tr.urgente td:nth-child(3) { color: var(--cor-urgente-texto); font-weight: 600; }
+
+tr.atencao { background-color: var(--cor-atencao); }
+tr.atencao td:nth-child(3) { color: var(--cor-atencao-texto); font-weight: 600; }
+
+.selo-verificar {
+  display: inline-block;
+  background: var(--cor-selo);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 0.75rem;
+  margin-left: 4px;
+}
+
+a { color: var(--cor-link); }
+
+.vazio {
+  text-align: center;
+  color: #666;
+  padding: 24px 0;
+}
+
+footer {
+  margin-top: 24px;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-texto: #eee;
+    --cor-fundo: #121212;
+    --cor-borda: #333;
+    --cor-urgente: #3a1f1f;
+    --cor-urgente-texto: #ff8a80;
+    --cor-atencao: #3a331a;
+    --cor-atencao-texto: #ffd873;
+    --cor-selo: #333;
+    --cor-link: #7db8ea;
+  }
+}

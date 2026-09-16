@@ -89,13 +89,13 @@ function linhaHtml(c, decisao) {
   let local = 'Recife';
   if (c.localizacao === 'recife_verificar') {
     if (decisao === 'manter') {
-      local = 'Recife <span class="selo-verificar selo-confirmado">confirmado por você</span> '
+      local = 'Recife <span class="selo-verificar selo-confirmado">mantido por você</span> '
         + `<button class="botao-decisao" data-id="${c.id}" data-acao="desfazer">desfazer</button>`;
     } else {
       local = 'Recife <span class="selo-verificar">verificar</span>'
         + `<div class="botoes-decisao">`
-        + `<button class="botao-decisao" data-id="${c.id}" data-acao="manter">É em Recife</button>`
-        + `<button class="botao-decisao" data-id="${c.id}" data-acao="descartar">Não é</button>`
+        + `<button class="botao-decisao" data-id="${c.id}" data-acao="manter">Manter</button>`
+        + `<button class="botao-decisao" data-id="${c.id}" data-acao="descartar">Excluir</button>`
         + `</div>`;
     }
   }

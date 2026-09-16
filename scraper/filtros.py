@@ -32,6 +32,14 @@ _TERMOS_TI_REGEX = re.compile(
 
 _TERMOS_RECIFE = ["recife", "grande recife", "regiao metropolitana do recife", "rmr"]
 
+# Órgãos municipais (Prefeitura/Câmara "de <cidade>") nomeiam a própria cidade no
+# título — se essa cidade não for Recife, o concurso é presencial lá, não em
+# Recife, e não é um caso ambíguo: dá pra excluir com segurança.
+_REGEX_ORGAO_MUNICIPAL = re.compile(
+    r"^(?:prefeitura|camara)(?:\s+municipal)?\s+(?:de|do|da)\s+(.+)$",
+    re.IGNORECASE,
+)
+
 _TERMOS_NIVEL_MEDIO_TECNICO = ["medio", "tecnico"]
 
 _TERMOS_ACEITA_CURSANDO = ["cursando", "em curso", "estudante", "matriculado"]
@@ -57,9 +65,16 @@ def detectar_localizacao(item: dict, veio_de_busca_cidade: bool) -> str:
     if uf != "PE":
         return "fora_de_escopo"
 
-    texto = _normalizar(item.get("titulo", "") + " " + item.get("cargos_resumo", ""))
+    titulo_norm = _normalizar(item.get("titulo", ""))
+    texto = titulo_norm + " " + _normalizar(item.get("cargos_resumo", ""))
     if any(termo in texto for termo in _TERMOS_RECIFE):
         return "recife_confirmado"
+
+    m = _REGEX_ORGAO_MUNICIPAL.match(titulo_norm)
+    if m:
+        cidade = m.group(1).strip()
+        if cidade != "recife":
+            return "fora_de_escopo"
 
     return "recife_verificar"
 

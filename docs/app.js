@@ -2,7 +2,7 @@ let todosOsConcursos = [];
 
 async function carregar() {
   try {
-    const resp = await fetch('data/concursos.json');
+    const resp = await fetch('data/concursos.json', { cache: 'no-store' });
     const dados = await resp.json();
     todosOsConcursos = dados.concursos || [];
     document.getElementById('atualizado').textContent = dados.atualizado_em
